@@ -64,7 +64,7 @@ class CucumberPlugin  implements Plugin<Project> {
                 .setDescription('The Cucumber classes to be used for this project.')
                 .extendsFrom(project.configurations.testCompile)
             project.dependencies.add(cucumberSourceSet.compileConfigurationName, mainSourceSet.output)
-            project.dependencies.add(cucumberSourceSet.compileConfigurationName, testSourceSet.output)
+            //project.dependencies.add(cucumberSourceSet.compileConfigurationName, testSourceSet.output)
 
             project.configurations.getByName(cucumberSourceSet.runtimeConfigurationName)
                 .setVisible(true)

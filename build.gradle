@@ -16,7 +16,7 @@ buildscript {
         maven { url 'http://repo.spring.io/plugins-release' }
     }
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
         classpath 'org.springframework.build.gradle:propdeps-plugin:0.0.7'
     }
 }
@@ -144,6 +144,10 @@ uploadArchives {
                         id 'klunk'
                         name 'Simon Wiehe'
                     }
+                    developer {
+                        id 'olliefreeman'
+                        name 'Ollie Freeman'
+                    }
                 }
             }
         }
@@ -151,7 +155,7 @@ uploadArchives {
 }
 
 task createWrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '2.4'
 }
 
 task printMainRuntimeClasspath {
